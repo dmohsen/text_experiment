@@ -24,3 +24,10 @@ filename: "test_data.csv",
 data_string: ()=>jsPsych.data.get().csv(),
 on_finish: function(data){alert(data.result.message)}
 };
+const end_trial = {
+type: jsPsychHtmlKeyboardResponse,
+stimulus: 'Nothing left to do here.'
+};
+jsPsych.run([dummy_trial, save_data_trial, end_trial]);
+</script>
+</html>
